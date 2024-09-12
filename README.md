@@ -50,7 +50,7 @@
     <section>
         <h2>项目</h2>
         <ul>
-            <li><a href="#">项目1</a></li>
+            <li><a href="#yinyue.html">我的音乐仓库</a></li>
             <li><a href="#">项目2</a></li>
             <li><a href="#">项目3</a></li>
         </ul>
