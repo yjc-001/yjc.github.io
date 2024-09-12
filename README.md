@@ -6,7 +6,7 @@
     <title>个人简介</title>
     <style>
         body {
-            background-image: url("docs/8AA6145B5C85732E40D00A16484EA0FF.jpg");
+            background-image: url("8AA6145B5C85732E40D00A16484EA0FF.jpg");
             background-size: cover;
             background-position: center;
             color: white;
@@ -24,7 +24,7 @@
 </head>
 <body>
     <header>
-        <img src="docs/10abd68ffd8d287f8ffe69f1f0ace9c.jpg" alt="头像">
+        <img src="10abd68ffd8d287f8ffe69f1f0ace9c.jpg" alt="头像">
         <h1>姚竣程</h1>
         <p>自由工作者</p>
     </header>
