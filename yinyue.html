@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐仓库</title>
+    <style>
+        body {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: black;
+        }
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            width: 800px;
+            height: 500px;
+            border: none; /* 移除原有边框 */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 添加玻璃相框效果 */
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 24px; /* 调整字体大小 */
+        }
+        h2 {
+            color: white;
+            text-align: center;
+            font-size: 18px; /* 调整字体大小 */
+        }
+        .player-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .control-button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .control-button:hover {
+            background-color: #555;
+        }
+
+        #current-track {
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Music</h1>
+    <h2>Fengyu's Music Treasure Repository</h2>
+    <div class="image-container">
+        <img id="image" src="2.jpg" alt="音乐图片">
+    </div>
+    <div class="player-controls">
+        <button class="control-button" id="previous-button">上一首</button>
+        <button class="control-button" id="play-pause-button">播放/暂停</button>
+        <button class="control-button" id="next-button">下一首</button>
+    </div>
+    <div id="current-track"></div>
+
+    <audio id="audio"></audio>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const playPauseButton = document.getElementById('play-pause-button');
+        const previousButton = document.getElementById('previous-button');
+        const nextButton = document.getElementById('next-button');
+        const currentTrackElement = document.getElementById('current-track');
+        const imageElement = document.getElementById('image');
+        const images = [
+            '2.jpg',
+            '3.jpg',
+            '4.jpg'
+        ];
+        let currentImageIndex = 0;
+
+        function updateImage() {
+            imageElement.src = images[currentImageIndex];
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
+
+        setInterval(updateImage, 5000);
+
+        let isPlaying = false;
+        let currentTrackIndex = 0;
+        const tracks = [
+            '暮色回响.mp3',
+            '达尔文.mp3',
+            '冬眠.mp3'
+        ];
+
+        function loadTrack() {
+            audio.src = tracks[currentTrackIndex];
+            audio.load();
+        }
+
+        function playTrack() {
+            audio.play();
+            isPlaying = true;
+            playPauseButton.textContent = '暂停';
+        }
+
+        function pauseTrack() {
+            audio.pause();
+            isPlaying = false;
+            playPauseButton.textContent = '播放';
+        }
+
+        function playNextTrack() {
+            currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+            loadTrack();
+            playTrack();
+            updateCurrentTrack();
+        }
+
+        function playPreviousTrack() {
+            currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
+            loadTrack();
+            playTrack();
+            updateCurrentTrack();
+        }
+
+        function handleTrackEnded() {
+            playNextTrack();
+        }
+
+        function updateCurrentTrack() {
+            currentTrackElement.textContent = tracks[currentTrackIndex];
+        }
+
+        playPauseButton.addEventListener('click', function() {
+            if (isPlaying) {
+                pauseTrack();
+            } else {
+                playTrack();
+            }
+        });
+
+        nextButton.addEventListener('click', function() {
+            playNextTrack();
+        });
+
+        previousButton.addEventListener('click', function() {
+            playPreviousTrack();
+        });
+
+        audio.addEventListener('ended', handleTrackEnded);
+
+        loadTrack();
+        updateCurrentTrack();
+    </script>
+</body>
+</html>
