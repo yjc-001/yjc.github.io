@@ -81,9 +81,7 @@
         const images = [
             '2.jpg',
             '3.jpg',
-            '4.jpg',
-            '1.jpg',
-            '5.jpg'
+            '4.jpg'
         ];
         let currentImageIndex = 0;
 
@@ -96,11 +94,7 @@
 
         let isPlaying = false;
         let currentTrackIndex = 0;
-        const tracks = [
-            '暮色回响.mp3',
-            '达尔文.mp3',
-            '冬眠.mp3'
-        ];
+        let tracks = []; // 音乐文件数组
 
         function loadTrack() {
             audio.src = tracks[currentTrackIndex];
@@ -159,8 +153,18 @@
 
         audio.addEventListener('ended', handleTrackEnded);
 
-        loadTrack();
-        updateCurrentTrack();
+        // 使用fetch API获取文件夹中的音乐文件
+        fetch('音乐库') // 替换为您的音乐文件夹路径
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const htmlDocument = parser.parseFromString(data, 'text/html');
+                const links = htmlDocument.querySelectorAll('a');
+                tracks = Array.from(links).map(link => 'music-folder/' + link.getAttribute('href'));
+                loadTrack();
+                updateCurrentTrack();
+            })
+            .catch(error => console.error(error));
     </script>
 </body>
 </html>
