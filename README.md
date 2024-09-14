@@ -49,10 +49,9 @@
     <section>
         <h2>项目</h2>
         <ul>
-            <li><a href="yinyue.html">风悦<音乐播放器></a></li>
-            <li><a href="#">风阅<网页模板专区></a></li>
+            <li><a href="yinyue.html">风悦(音乐播放器)</a></li>
+            <li><a href="#">风阅(网页模板专区)</a></li>
             <li><a href="#">项目3</a></li>
-        </ul>
     <footer>
         <p>联系方式：
             <br>我的邮箱：2029479643@qq.com
