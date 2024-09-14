@@ -50,7 +50,7 @@
         <h2>项目</h2>
         <ul>
             <li><a href="yinyue.html">风悦(音乐播放器)</a></li>
-            <li><a href="#">风阅(网页模板专区)</a></li>
+            <li><a href="风阅.html">风阅(网页模板专区)</a></li>
             <li><a href="#">项目3</a></li>
     <footer>
         <p>联系方式：
