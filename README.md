@@ -5,7 +5,7 @@
     <title>个人简介</title>
     <style>
         body {
-            background-image: url("8AA6145B5C85732E40D00A16484EA0FF.jpg");
+            background-image: url("图库/8AA6145B5C85732E40D00A16484EA0FF.jpg");
             background-size: cover;
             background-position: center;
             color: white;
@@ -23,7 +23,7 @@
 </head>
 <body>
     <header>
-        <img src="10abd68ffd8d287f8ffe69f1f0ace9c.jpg" alt="头像">
+        <img src="图库/3.jpg" alt="头像">
         <h1>风亐</h1>
         <p>自由工作者</p>
     </header>
@@ -49,8 +49,8 @@
     <section>
         <h2>项目</h2>
         <ul>
-            <li><a href="yinyue.html">我的音乐仓库</a></li>
-            <li><a href="#">网页模板专区</a></li>
+            <li><a href="yinyue.html">风悦<音乐播放器></a></li>
+            <li><a href="#">风阅<网页模板专区></a></li>
             <li><a href="#">项目3</a></li>
         </ul>
     </section>
