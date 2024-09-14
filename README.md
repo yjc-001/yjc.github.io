@@ -25,7 +25,7 @@
 <body>
     <header>
         <img src="10abd68ffd8d287f8ffe69f1f0ace9c.jpg" alt="头像">
-        <h1>姚竣程</h1>
+        <h1>风亐</h1>
         <p>自由工作者</p>
     </header>
     <section>
@@ -51,12 +51,13 @@
         <h2>项目</h2>
         <ul>
             <li><a href="yinyue.html">我的音乐仓库</a></li>
-            <li><a href="#">项目2</a></li>
+            <li><a href="#">网页模板专区</a></li>
             <li><a href="#">项目3</a></li>
         </ul>
     </section>
     <footer>
-        <p>联系方式：我的邮箱2029479643@qq.com
+        <p>联系方式：
+            <br>我的邮箱2029479643@qq.com
             <br>我的电话：18798755738
         </p>
     </footer>
