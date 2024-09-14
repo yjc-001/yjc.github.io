@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -57,7 +56,7 @@
     </section>
     <footer>
         <p>联系方式：
-            <br>我的邮箱2029479643@qq.com
+            <br>我的邮箱：2029479643@qq.com
             <br>我的电话：18798755738
         </p>
     </footer>
