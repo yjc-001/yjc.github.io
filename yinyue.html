@@ -5,9 +5,7 @@
     <title>风悦</title>
     <style>
         body {
-            width: 800px;
-            height: 600px;
-            margin: 0 auto;
+            margin: 1 auto;
             background-color: black;
         }
         .image-container {
@@ -54,6 +52,16 @@
             font-size: 16px;
             margin-top: 10px;
         }
+
+        .loop-button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -64,8 +72,9 @@
     </div>
     <div class="player-controls">
         <button class="control-button" id="previous-button">上一首</button>
-        <button class="control-button" id="play-pause-button">播放/暂停</button>
+        <button class="control-button" id="play-pause-button">播放</button>
         <button class="control-button" id="next-button">下一首</button>
+        <button class="loop-button" id="loop-button">循环播放</button>
     </div>
     <div id="current-track"></div>
 
@@ -76,6 +85,7 @@
         const playPauseButton = document.getElementById('play-pause-button');
         const previousButton = document.getElementById('previous-button');
         const nextButton = document.getElementById('next-button');
+        const loopButton = document.getElementById('loop-button');
         const currentTrackElement = document.getElementById('current-track');
         const imageElement = document.getElementById('image');
         const images = [
@@ -142,7 +152,11 @@
         }
 
         function handleTrackEnded() {
-            playNextTrack();
+            if (loopButton.classList.contains('playing')) {
+                playTrack();
+            } else {
+                playNextTrack();
+            }
         }
 
         function updateCurrentTrack() {
@@ -163,6 +177,10 @@
 
         previousButton.addEventListener('click', function() {
             playPreviousTrack();
+        });
+
+        loopButton.addEventListener('click', function() {
+            loopButton.textContent = loopButton.textContent === '循环播放' ? '单曲循环' : '循环播放';
         });
 
         audio.addEventListener('ended', handleTrackEnded);
