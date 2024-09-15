@@ -82,7 +82,7 @@
   }
   .avatar-container {
   position: absolute;
-  top: 56%;
+  top: 46%;
   left: 82%;
   transform: translate(-50%, -50%);
   }
@@ -102,8 +102,8 @@
     <nav>
       <ul>
         <li class="current"><a href="#profile">风亐<span class="small-font">（简介）</span></a></li>
-        <li><a href="#skills">风悦<span class="small-font">（音乐播放器）</span></a></li>
-        <li><a href="#experience">风阅<span class="small-font">（网页模板）</span></a></li>
+        <li><a href="https://yjc-001.github.io/.github.io/yinyue.html">风悦<span class="small-font">（音乐播放器）</span></a></li>
+        <li><a [href="https://yjc-001.github.io/.github.io/风阅.html](https://yjc-001.github.io/.github.io/%E9%A3%8E%E9%98%85.html)">风阅<span class="small-font">（网页模板）</span></a></li>
       </ul>
     </nav>
   </div>
