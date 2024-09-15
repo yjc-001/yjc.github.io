@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>风悦</title>
+    <title>音乐仓库</title>
     <style>
         body {
             margin: 1 auto;
@@ -152,8 +152,10 @@
         }
 
         function handleTrackEnded() {
-            if (loopButton.classList.contains('playing')) {
+            if (loopButton.textContent === '单曲循环') {
+                loadTrack();
                 playTrack();
+                updateCurrentTrack();
             } else {
                 playNextTrack();
             }
