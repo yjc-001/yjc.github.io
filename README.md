@@ -83,7 +83,7 @@
   .avatar-container {
   position: absolute;
   top: 47%;
-  left: 86%;
+  left: 76%;
   transform: translate(-50%, -50%);
   }
   .small-font {
