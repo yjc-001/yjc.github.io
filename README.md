@@ -74,7 +74,7 @@
   .profile h2 {
     margin: 0 0 10px 0;
     color: #ffffff;
-    margin-top: 180px;
+    margin-top: 185px;
   }
   .profile p {
     margin-bottom: 20px;
