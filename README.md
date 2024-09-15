@@ -56,6 +56,7 @@
   header .highlight, header .current a {
     color: #8567f1;
     font-weight: bold;
+    background-color: transparent;
   }
   header a:hover {
     color: #ffffff;
