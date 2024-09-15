@@ -74,7 +74,7 @@
   .profile h2 {
     margin: 0 0 10px 0;
     color: #ffffff;
-    margin-top: 170px;
+    margin-top: 180px;
   }
   .profile p {
     margin-bottom: 20px;
@@ -82,7 +82,7 @@
   }
   .avatar-container {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 82%;
   transform: translate(-50%, -50%);
   }
